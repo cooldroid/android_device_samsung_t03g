@@ -27,8 +27,10 @@ const char *mr_init_devices[] =
  // Input stuff
  "/sys/devices/virtual/input*",
  "/sys/devices/virtual/misc/uinput",
- "/sys/devices/platform/s3c2440-i2c.3/i2c-3/3-0048/input/input2*", // Touchscreen
- "/sys/devices/platform/s3c2440-i2c.5/i2c-5/5-0056/input/input12*", // Touchscreen
+ "/sys/devices/platform/s3c2440-i2c.3/i2c-3/3-0048/input/input2*", // Touchscreen AOSP
+ "/sys/devices/platform/s3c2440-i2c.5/i2c-5/5-0056/input/input12*", // Touchscreen AOSP
+ "/sys/devices/platform/s3c2440-i2c.3/i2c-3/3-0048/input/input1*", // Touchscreen Touchwiz
+ "/sys/devices/platform/s3c2440-i2c.5/i2c-5/5-0056/input/input11*", // Touchscreen Touchwiz
  "/sys/devices/platform/gpio-keys.0/input*",
  "/sys/class/sec/sec_key*",
  "/sys/class/sec/sec_touchkey*",

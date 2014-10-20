@@ -108,12 +108,11 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # MultiROM config. MultiROM also uses parts of TWRP config
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/samsung/t03g/multirom/mr_init_devices.c
-#MR_RD_ADDR := 0x42500000
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/samsung/t03g/multirom/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x44000000
 MR_USE_MROM_FSTAB := true
-#MR_INFOS := device/samsung/t03g/multirom/mrom_infos
+MR_INFOS := device/samsung/t03g/mrom_infos
 MR_DEVICE_HOOKS := device/samsung/t03g/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 3

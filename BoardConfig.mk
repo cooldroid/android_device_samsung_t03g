@@ -102,6 +102,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TW_INCLUDE_FB2PNG := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_EXFAT := true
+TW_NO_SCREEN_BLANK := true
+RECOVERY_VARIANT := twrp
 #TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
@@ -111,7 +113,7 @@ MR_INIT_DEVICES := device/samsung/t03g/multirom/mr_init_devices.c
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/samsung/t03g/multirom/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x44000000
+MR_KEXEC_MEM_MIN := 0x46000000
 MR_USE_MROM_FSTAB := true
 MR_INFOS := device/samsung/t03g/mrom_infos
 MR_DEVICE_HOOKS := device/samsung/t03g/multirom/mr_hooks.c

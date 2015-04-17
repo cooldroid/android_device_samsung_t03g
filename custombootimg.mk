@@ -1,17 +1,17 @@
 LZMA_BIN := /usr/bin/lzma
-
+GZIP_BIN := /bin/gzip
 
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
 		$(recovery_ramdisk) \
 		$(recovery_kernel)
 	@echo ----- Compressing recovery ramdisk with lzma ------
-	$(LZMA_BIN) $(recovery_uncompressed_ramdisk)
-	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
+	$(GZIP_BIN) -cd $(recovery_ramdisk) | $(LZMA_BIN) > $(recovery_ramdisk).lzma
+	$(hide) rm $(recovery_ramdisk)
+	$(hide) mv $(recovery_ramdisk).lzma $(recovery_ramdisk)
 	@echo ----- Making recovery image ------
 	$(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
 	@echo ----- Made recovery image -------- $@
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
-
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES)
 	$(call pretty,"Target boot image: $@")

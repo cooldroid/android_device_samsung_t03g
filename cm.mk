@@ -2,14 +2,14 @@
 PRODUCT_RELEASE_NAME := t03g
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/t03g/device_t0lteatt.mk)
+$(call inherit-product, device/samsung/note2/device_note2.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := t03g
-PRODUCT_NAME := cm_t03g
+PRODUCT_DEVICE := note2
+PRODUCT_NAME := cm_note2
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := t03g
 PRODUCT_MANUFACTURER := Samsung
